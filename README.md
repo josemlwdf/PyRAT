@@ -7,11 +7,8 @@ PyRAT is a powerful CTF (Capture The Flag) rootkit designed to be used in cybers
 ## Features
 
 - **Privilege Escalation:** PyRAT provides methods for escalating privileges on compromised systems, allowing users to gain root access and perform administrative actions.
-- **Process and File Hiding:** The rootkit can hide specific processes and files, making them invisible to system monitoring tools and preventing their detection.
-- **Persistence Mechanism:** PyRAT ensures that the rootkit remains active even after system reboots, maintaining persistent access to the compromised system.
 - **Backdoor Access:** The rootkit opens a backdoor on the target system, providing a covert channel for remote access and control.
 - **Remote Command Execution:** Users can remotely execute commands on the compromised system through the backdoor channel.
-- **Stealth Techniques:** PyRAT incorporates various stealth techniques to evade detection by antivirus software and intrusion detection systems.
 - **Customizable Configurations:** The rootkit's behavior and settings can be customized to suit specific requirements and scenarios.
 
 ## Requirements
