@@ -1,4 +1,4 @@
-# PyRAT - CTF Rootkit
+# PyRAT (Python RAT) - CTF Rootkit
 
 PyRAT is a powerful CTF (Capture The Flag) rootkit designed to be used in cybersecurity competitions and educational settings. It is a feature-rich tool that provides various capabilities for privilege escalation, hiding processes and files, and maintaining persistent access on compromised systems.
 
