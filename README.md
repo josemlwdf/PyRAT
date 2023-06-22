@@ -68,6 +68,8 @@ The developers and contributors of the PyRAT CTF Rootkit are not responsible for
 Contributions to the PyRAT CTF Rootkit project are welcome! If you have suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
 Before contributing, please review the code of conduct and contribution guidelines for a smooth collaboration experience.
 
+josemlwdf@github.com
+
 ## License
 
 ``The PyRAT CTF Rootkit is licensed under the MIT License. See the LICENSE file for more details. 
