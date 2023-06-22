@@ -1,3 +1,6 @@
+# Made by josemlwdf@github.com
+# Pyrat.py is a "python RAT tool" designed to be used on CTF
+
 import socket
 import threading
 import sys
