@@ -1,4 +1,4 @@
-                                   <img src="logo.png" alt="pyrat josemlwdf" width="300" height="300">
+<img src="logo.png" alt="pyrat josemlwdf" width="300" height="300">
 
 # PyRAT (Python RAT) - CTF Rootkit
 
