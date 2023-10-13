@@ -87,7 +87,7 @@ def get_admin(client_socket):
         send_data(client_socket, "Start a fresh client to begin.")
         return
 
-    password = '1d0ntth1nks0'
+    password = 'testpass'
 
     for i in range(0, 3):
         # Ask for Password
