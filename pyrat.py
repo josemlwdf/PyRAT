@@ -2,12 +2,10 @@
 # Pyrat.py is a "python RAT tool" designed to be used on CTF
 
 import socket
-import threading
 import sys
 from io import StringIO
 import datetime
 import os
-import getpass
 import multiprocessing
 
 manager = multiprocessing.Manager()
@@ -15,28 +13,21 @@ admins = manager.list()
 
 
 def handle_client(client_socket, client_address):
-    uid = os.getuid()
-    uid_changed = False
-
-    while True:
-        # Receive data from the client
-        try:
+    try:
+        while True:
+            # Receive data from the client
             data = client_socket.recv(1024).decode("utf-8")
-        except Exception as e:
-            # Send the exception message back to the client
-            send_data(client_socket, e)
-            continue
+            if not data:
+                # Client disconnected
+                break
+            if is_http(data):
+                send_data(client_socket, fake_http())
+                continue
 
-        if not data:
-            continue
-
-        if is_http(data):
-            send_data(client_socket, fake_http())
-            continue
-
-        switch_case(client_socket, str(data).strip())
-
-    # Close the connection with the client
+            switch_case(client_socket, str(data).strip())
+    except:
+        pass
+    
     remove_socket(client_socket)
 
 
@@ -48,9 +39,9 @@ def switch_case(client_socket, data):
         uid = os.getuid()
         if (uid == 0) and (str(client_socket) not in admins):
             change_uid()
-
         if data == 'shell':
             shell(client_socket)
+            remove_socket(client_socket)
         else:
             exec_python(client_socket, data)
 
@@ -58,6 +49,7 @@ def switch_case(client_socket, data):
 # Tries to execute the random data with Python
 def exec_python(client_socket, data):
     try:
+        print(str(client_socket) + " : " + str(data))
         # Redirect stdout to capture the printed output
         captured_output = StringIO()
         sys.stdout = captured_output
@@ -135,8 +127,8 @@ def start_server(host, port):
     server_socket.listen(5)
     print(f"Server listening on {host}:{port}...")
 
-    while True:
-        client_socket, client_address = server_socket.accept()
+    while True: 
+        client_socket, client_address = server_socket.accept()        
         # Start a new process to handle the client
         p = multiprocessing.Process(target=handle_client, args=(client_socket, client_address))
         p.start()
@@ -144,12 +136,11 @@ def start_server(host, port):
 
 def remove_socket(client_socket):
     client_socket.close()
-    global admins
-
-    # Replace the original and admins lists
-    admins = admins._getvalue()
-
     try:
+        global admins
+        # Replace the original and admins lists
+        admins = admins._getvalue()
+    
         if str(client_socket) in admins:
             admins.remove(str(client_socket))
     except:
