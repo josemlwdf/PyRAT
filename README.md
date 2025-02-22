@@ -5,7 +5,7 @@
 
 # PyRAT (Python RAT) - CTF Rootkit
 
-PyRAT is a powerful CTF (Capture The Flag) rootkit designed to be used in cybersecurity competitions and educational settings. It is a feature-rich tool that provides various capabilities for privilege escalation, hiding processes and files, and maintaining persistent access on compromised systems.
+PyRAT is a powerful CTF (Capture The Flag) rootkit designed to be used in cybersecurity competitions and educational settings. It is a feature-rich tool designed for privilege escalation, process and file hiding, and persistent access on compromised systems.
 
 ``**Note:** The PyRAT CTF Rootkit is intended for educational purposes and authorized security assessments only. Do not use this tool for any malicious activities or unauthorized activities.``
 
@@ -14,7 +14,7 @@ PyRAT is a powerful CTF (Capture The Flag) rootkit designed to be used in cybers
 - **Privilege Escalation:** PyRAT provides methods for escalating privileges on compromised systems, allowing users to gain root access and perform administrative actions.
 - **Backdoor Access:** The rootkit opens a backdoor on the target system, providing a covert channel for remote access and control.
 - **Remote Command Execution:** Users can remotely execute commands on the compromised system through the backdoor channel.
-- **Customizable Configurations:** The rootkit's behavior and settings can be customized to suit specific requirements and scenarios.
+- **Customizable Configurations:** The rootkit's behaviour and settings can be customized to suit specific requirements and scenarios.
 
 ## Requirements
 
@@ -26,17 +26,18 @@ PyRAT is a powerful CTF (Capture The Flag) rootkit designed to be used in cybers
 
 1. Clone the repository:
 
-       git clone https://github.com/josewdf/pyrat.git
+       git clone https://github.com/josemlwdf/pyrat.git
        cd pyrat
    
 2. Deploy the rootkit:
 
-Run the deployment script with root or administrative privileges to install the rootkit on the target system.
+       sudo python3 pyrat.py
+ 
+   Run the deployment script with root or administrative privileges to install the rootkit on the target system.
 Review the deployment script (pyrat.py) and ensure it reflects your desired deployment settings.
-Caution: Deploying the PyRAT rootkit on unauthorized systems is illegal and unethical. Obtain proper authorization and adhere to legal and ethical guidelines.
-        
-        sudo python3 pyrat.py
 
+   **Caution: Deploying the PyRAT rootkit on unauthorized systems is illegal and unethical. Obtain proper authorization and adhere to legal and ethical guidelines.**
+    
 ## Usage
 
 Once the PyRAT CTF Rootkit is deployed on the target system, it operates silently in the background, providing the specified functionalities.
@@ -59,7 +60,7 @@ It is essential to exercise caution and ensure proper legal and ethical complian
 
    - **Shell**: To access the shell functionality, type `shell` and press Enter. This will spawn a shell on the server, allowing you to execute commands. You can enter any valid shell command, and the output will be displayed on your `nc` session.
 
-   - **Python Interactive**: To execute python commands on the server just send your python commands and it will be passed to the ``exec`` function.
+   - **Python Interactive**: To execute Python commands on the server, simply send them, and they will be executed using the `exec` function.
 
 Note: Make sure to replace `<server_ip>` with the actual IP address of the server running the script.
 
@@ -73,7 +74,7 @@ The developers and contributors of the PyRAT CTF Rootkit are not responsible for
 Contributions to the PyRAT CTF Rootkit project are welcome! If you have suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
 Before contributing, please review the code of conduct and contribution guidelines for a smooth collaboration experience.
 
-LinkedIn/jose-mario-llado-marti
+[LinkedIn: jose-mario-llado-marti](https://www.linkedin.com/in/jose-mario-llado-marti/)
 
 ## License
 
