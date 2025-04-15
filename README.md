@@ -75,9 +75,9 @@ Contributions to the PyRAT CTF Rootkit project are welcome! If you have suggesti
 Before contributing, please review the code of conduct and contribution guidelines for a smooth collaboration experience.
 
 [LinkedIn: jose-mario-llado-marti](https://www.linkedin.com/in/jose-mario-llado-marti/)
+Logo: [Lauren Lefumeur-Pasdeloup](https://www.deviantart.com/neruall)
 
 ## License
 
 ``The PyRAT CTF Rootkit is licensed under the MIT License. See the LICENSE file for more details. 
 Feel free to modify and expand the README to provide more specific details, instructions, and guidelines according to your project requirements.``
-    
