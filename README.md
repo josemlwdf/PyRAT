@@ -75,6 +75,7 @@ Contributions to the PyRAT CTF Rootkit project are welcome! If you have suggesti
 Before contributing, please review the code of conduct and contribution guidelines for a smooth collaboration experience.
 
 [LinkedIn: jose-mario-llado-marti](https://www.linkedin.com/in/jose-mario-llado-marti/)
+
 Logo: [Lauren Lefumeur-Pasdeloup](https://www.deviantart.com/neruall)
 
 ## License
